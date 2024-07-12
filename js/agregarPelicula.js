@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
        };
     
         //realizo la peticion fetch a la api para agregar una pelicula
-        const response = await fetch(proyectopeliculas', options);
+        const response = await fetch('http://localhost/CAC_PHP_API/peliculas', options);
         //obtengo la respuesta
         const data = await response.json();
         //si la respuesta es correcta, muestro un mensaje de exito y limpio los inputs del formulario
