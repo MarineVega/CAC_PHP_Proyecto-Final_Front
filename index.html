@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VideoPlay - Catalogo de Peliculas</title>
+        <!-- etiqueta del ícono de la página web -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/8d7fd510d4.js" crossorigin="anonymous"></script>
+        <!-- animaciones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />    
+        <!-- estilos de CSS -->
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <!--etiqueta contenedora de la estructura semantica de la pagina web que vera el usuario-->
+    <body>
+        <!-- <header class="header"> -->        
+        <header class="header">
+            <!--etiqueta contenedora de la nav-->             
+            <!-- <nav class="contenedorNavegacion"> -->
+            <nav>
+                <!-- <a class="anclaLogo" href="#">    se llama a sí misma -->
+                <a href="#" class="animate__animated animate__zoomIn">  
+                    <img src="./assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
+                    <!-- loading="lazy" -> aplaza la carga de imágenes hasta que son necesarias --> 
+                    <span>VideoPlay</span>
+                </a>
+                <!-- <ul class="navegacion"> -->
+                <ul> 
+                    <li><a href="#tendencias">Tendencias</a></li>
+                    <li><a href="#aclamadas">Aclamadas</a></li>
+                    <li><a href="./pages/registrarse.html">Registrarse</a></li>
+                    <li><a href="./pages/inicioSesion.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <!-- Sección Principal -->
+            <!-- <section id="principal"> -->
+            <section class="seccionTitulos"> 
+                <div class="contenedorTitulos">
+                    <h1>Las Películas y Series <br> que vos buscás</h1>
+                    <h2>Disfruta donde quieras.<br>Compartilo con quien quieras.</h2>
+                    <a href="./pages/registrarse.html">Registrate</a>
+                </div>
+            </section>
+
+            <!-- Sección Búsqueda -->
+            <!-- <section id="busqueda"> -->
+            <section class="seccionBusqueda">
+                <div class="contenedorBusqueda">
+                    <h2>¿Qué te gustaría ver?</h2>
+                    <form>
+                        <input type="text" name="buscar" id="buscar" placeholder="Buscar..." required class="inputBuscador">
+                        <input type="submit" name="btnBuscar" id="btnBuscar" value="Buscar" class="btnBuscador" >
+                    </form>
+                </div>            
+            </section>
+
+            <hr>
+            <!-- Sección Tendencias -->
+            <section id="tendencias" class="peliculasTendencias">
+                <h2>Tendencias de hoy!</h2>
+                <div class="galeriaTendencias">
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_1.jpeg" alt="tendencia_1" loading="lazy"></a></div>          
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_2.jpeg" alt="tendencia_2" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_3.jpeg" alt="tendencia_3" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_4.jpeg" alt="tendencia_4" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_5.jpeg" alt="tendencia_5" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_6.jpeg" alt="tendencia_6" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_7.jpeg" alt="tendencia_7" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_8.jpeg" alt="tendencia_8" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_9.jpg" alt="tendencia_9" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_10.jpg" alt="tendencia_10" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_11.jpeg" alt="tendencia_11" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_12.jpeg" alt="tendencia_12" loading="lazy"></a></div>
+                </div>
+
+                <button class="btnAnterior">Anterior</button>
+                <button class="btnSiguiente">Siguiente</button>
+            </section>
+            <hr>
+            <!-- Sección Más aclamados -->
+    
+            <section id="aclamadas" class="peliculasAclamadas">        
+                <h2>Las más aclamadas</h2>
+                <div id="peliculasSection" class="galeriaAclamadas"></div>    
+            </section>
+        </main>
+
+        <footer class="footer">
+           <nav>
+                <ul>
+                    <li><a href="">Términos y condiciones</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Ayuda</a></li>
+                    <li><a href="./pages/administrador.html">Administrador Películas</a></li>
+                </ul>        
+            </nav>
+                <!--<a href="#main" class="flechaArriba">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i> -->
+                <!-- <a href="#main"><img src="./assets/img/Flecha_arriba.png" alt="ir arriba" class="flechaArriba"></a> -->
+                
+                <a href="#main"><img src="./assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha" class="flechaArriba"></a>
+        </footer>
+        
+        <!-- <script src="./js/mostrarPeliculasApi.js"></script> -->
+        <!-- <script src="./js/api.js"></script> -->
+        <script src="./js/apiMostrarPeliculas.js"></script>
+        
+    </body>
+</html>
+

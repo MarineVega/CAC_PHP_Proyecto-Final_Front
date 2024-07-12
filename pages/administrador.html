@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoPlay - Administrador de Peliculas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8d7fd510d4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
+                    <span>VideoPlay</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-5" aria-current="page"
+                                href="../index.html#tendencias">Tendencias</a>
+                        </li>
+                        <li class="nav-item fs-5">
+                            <a class="nav-link" href="../index.html#aclamadas">Aclamadas</a>
+                        </li>
+                        <li class="nav-item fs-5">
+                            <a class="nav-link" href="../pages/registrarse.html">Registrarse</a>
+                        </li>
+
+                        <li class="nav-item fs-5">
+                            <a class="nav-link" href="../pages/inicioSesion.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main id="mainAdministrador" class="mainAdministrador">
+        <section class="container mt-4">
+            <form id="formNuevaPelicula" class="row" method="post" enctype="multipart/form-data">
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo">
+                    <div id="titulo-error" class="error"></div>
+                </div>
+               
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="genero" class="form-label">Género</label>
+                    <input type="text" class="form-control" id="genero" name="genero">
+                    <div id="genero-error" class="error"></div>
+                </div>
+
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="duracion" class="form-label">Duración</label>
+                    <input type="text" class="form-control" id="duracion" placeholder="2h 33m" name="duracion">
+                    <div id="duracion-error" class="error"></div>
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="director" class="form-label">Director</label>
+                    <input type="text" class="form-control" id="director" name="director">
+                    <div id="director-error" class="error"></div>
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="reparto" class="form-label">Reparto</label>
+                    <input type="text" class="form-control" id="reparto" name="reparto">
+                    <div id="reparto-error" class="error"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="sinopsis" class="form-label">Sinopsis</label>
+                    <input type="text" class="form-control" id="sinopsis" name="sinopsis">
+                    <div id="sinopsis-error" class="error"></div>
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="imagen" class="form-label">Imagen</label>
+                    <input type="file" class="form-control" id="imagen" name="imagen">
+                    <div id="imagen-error" class="error"></div>
+                </div>
+
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-success" value="Grabar Película">
+                </div>
+            </form>
+
+        </section>
+
+        <section class="container mt-4">
+            <table class="table table-dark table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Reparto</th>
+                    <th scope="col">Sinopsis</th>
+                    <th scope="col">Imagen</th>
+                  </tr>
+                </thead>
+                <tbody id="bodyTablePeliculas">
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li><a href="">Términos y condiciones</a></li>
+                <li><a href="">Preguntas frecuentes</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <a href="#main"><img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha"
+                class="flechaArriba"></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/consultarPeliculas.js"></script>    <!-- GET -->
+    <script src="../js/agregarPelicula.js"></script>        <!-- POST -->
+</body>
+
+</html>

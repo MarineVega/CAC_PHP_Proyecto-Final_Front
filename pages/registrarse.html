@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoPlay - Catalogo de Peliculas</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- estilos de CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+<body>
+    <header class="headerRegistrarse">
+        <nav>
+            <a href="../index.html">  
+                <img src="../assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
+                <span>VideoPlay</span>
+            </a>
+            <ul> 
+                <!-- <li><a href="../pages/registrarse.html">Registrarse</a></li> -->
+                <li><a href="../pages/inicioSesion.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="mainRegistrarse">
+        <!-- Títulos -->
+        <h1>Registro</h1>
+        <form action="validar.php" method="post" class="formRegistro" id="formRegistro">
+            <div>
+                <label for="nombre">Nombre</label>                
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="inputRegistrarse">
+                <div id="nombreError" class="mensaje-error"></div>                  
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="inputRegistrarse">  
+                <div id="apellidoError" class="mensaje-error"></div>                
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" class="inputRegistrarse">
+                <div id="emailError" class="mensaje-error"></div>                  
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" class="inputRegistrarse">  
+                <div id="contraseniaError" class="mensaje-error"></div>                
+            </div>
+            <div>
+                <label for="nacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" class="inputRegistrarse"> 
+                <div id="nacimientoError" class="mensaje-error"></div>                 
+            </div>
+            <div>
+                <label for="pais">Pais</label>
+                <select name="pais" id="pais" class="selectPais">
+                    <option value="AR" selected>Argentina</option>
+                    <option value="BR">Brasil</option>
+                    <option value="PA">Paraguay</option>
+                    <option value="UR">Uruguay</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="PE">Perú</option>
+                    <option value="CH">Chile</option>
+                </select>
+            </div>
+            <div class="divTerminos">
+                <input type="checkbox" value="1" name="terminos" required>
+                <label for="terminos">Acepto términos y condiciones</label>
+            </div>
+
+            <div>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Comentarios" class="inputArea"></textarea>
+            </div>
+              
+            <div class="divBotones">
+                <input type="reset" class="btnRegistrarse">
+                <input type="submit" value="Registrarse" class="btnRegistrarse">
+            </div>
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="../js/validarRegistrarse.js"></script>
+</body>
+</html>

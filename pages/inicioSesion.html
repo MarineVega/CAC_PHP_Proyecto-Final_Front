@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoPlay - Catalogo de Peliculas</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8d7fd510d4.js" crossorigin="anonymous"></script>
+    <!-- estilos de CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+    <header class="headerInicioSesion">
+        <nav>
+            <a href="../index.html">  
+                <img src="../assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
+                <span>VideoPlay</span>
+            </a>
+            <ul> 
+                <li><a href="../pages/registrarse.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainInicioSesion">
+        <h1>Iniciar Sesión</h1>
+
+        <!-- <form action="validar.php" method="post" class="formRegistro"> -->
+        <form id="loginForm">            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" class="inputRegistrarse"> 
+                <div id="emailError" class="mensaje-error"></div>                
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" class="inputRegistrarse">                
+                <div id="contraseniaError" class="mensaje-error"></div>
+            </div>
+
+            <div>               
+                <input type="submit" value="Iniciar Sesión" class="boton">
+            </div> 
+        </form>
+    </main>
+
+    <script src="../js/validarLogin.js"></script>
+</body>
+</html>
